@@ -11,3 +11,4 @@ Built with plain HTML, CSS, and a little vanilla JavaScript (no frameworks) and 
 - `style.css`: styles, responsive layout, light/dark themes
 - `script.js`: theme toggle, scroll animations, active nav highlighting
 - `images/`: headshot
+- `files/`: résumé PDF
