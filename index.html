@@ -5,35 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>William Gerhardstein | Portfolio</title>
   <meta name="description" content="William Gerhardstein builds Python research systems for quantitative trading and AI-driven market analysis.">
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a href="#top" class="brand">William Gerhardstein</a>
+      <a href="#top" class="brand">WG</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+      </button>
     </nav>
   </header>
 
   <main id="top">
     <section id="about" class="hero">
-      <p class="eyebrow">Personal Statement</p>
-      <h1>William Gerhardstein</h1>
-      <p class="statement">
-        I build Python research systems that decide when data is trustworthy enough to act on, from validating thousands of futures trading strategies to running AI-driven market research pipelines.
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#projects">View projects</a>
-        <a class="btn" href="https://github.com/wgerhardstein" target="_blank" rel="noopener">GitHub</a>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <img class="avatar" src="images/headshot.jpg" alt="Portrait of William Gerhardstein" width="600" height="600">
+        <div>
+          <p class="eyebrow">Personal Statement</p>
+          <h1>William <span class="grad">Gerhardstein</span></h1>
+          <p class="statement">
+            I build Python research systems that decide when data is trustworthy enough to act on, from validating thousands of futures trading strategies to running AI-driven market research pipelines.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View projects</a>
+            <a class="btn" href="https://github.com/wgerhardstein" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="#contact">Contact</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="reveal">
       <h2>Skills</h2>
       <div class="skill-grid">
         <div class="skill-card">
@@ -67,69 +82,115 @@
       </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="reveal">
       <h2>Projects</h2>
       <div class="project-list">
+
         <article class="project">
-          <div class="project-head">
-            <h3>Futures Research Platform</h3>
-            <span class="lang">Python</span>
+          <div class="preview preview-funnel" aria-label="Chart: 8,179 strategy configurations tested, 672 survived, 9 running live">
+            <div class="funnel-row"><span class="f-label">Tested</span><span class="f-bar" style="--w:100%"></span><span class="f-val">8,179</span></div>
+            <div class="funnel-row"><span class="f-label">Survived noise test</span><span class="f-bar" style="--w:28%"></span><span class="f-val">672</span></div>
+            <div class="funnel-row"><span class="f-label">Running live</span><span class="f-bar live" style="--w:4%"></span><span class="f-val">9</span></div>
           </div>
-          <p>
-            A research program for deciding when a backtest can be trusted. I tested 8,179 futures strategy
-            configurations across 39 million one-minute bars and rejected 7,507 (91.8%) as indistinguishable
-            from noise. The project documents the decisions behind the result, including catching a deadline
-            calculation that was 50% too generous and declining to deploy a top-scoring strategy book that failed on
-            unseen data.
-          </p>
-          <ul class="tags small">
-            <li>Walk-forward validation</li><li>340K simulated paths</li><li>88 decision docs</li>
-          </ul>
-          <div class="links">
-            <a href="https://github.com/wgerhardstein/futures-research-platform" target="_blank" rel="noopener">View code on GitHub →</a>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Futures Research Platform</h3>
+              <span class="lang">Python</span>
+            </div>
+            <div class="stats">
+              <div><strong>8,179</strong><span>configs tested</span></div>
+              <div><strong>91.8%</strong><span>rejected</span></div>
+              <div><strong>39M</strong><span>1-min bars</span></div>
+            </div>
+            <p>
+              A research program for deciding when a backtest can be trusted. I tested futures strategy configurations
+              across 39 million one-minute bars and rejected 7,507 as indistinguishable from noise. The project documents
+              the decisions behind the result, including catching a deadline calculation that was 50% too generous and
+              declining to deploy a top-scoring strategy book that failed on unseen data.
+            </p>
+            <ul class="tags small">
+              <li>Walk-forward validation</li><li>340K simulated paths</li><li>88 decision docs</li>
+            </ul>
+            <div class="links">
+              <a href="https://github.com/wgerhardstein/futures-research-platform" target="_blank" rel="noopener">View code on GitHub →</a>
+            </div>
           </div>
         </article>
 
         <article class="project">
-          <div class="project-head">
-            <h3>Personal Intelligence System</h3>
-            <span class="lang">Python · TypeScript</span>
+          <div class="preview preview-report" aria-label="Sample morning briefing from the scanner">
+            <div class="report-card">
+              <div class="report-title">Options Scanner Report · 2026-04-20</div>
+              <div class="report-row"><span>Regime</span><b class="pill green">RISK-ON · VIX 19.05</b></div>
+              <div class="report-row"><span>Scanned</span><b>VKTX</b></div>
+              <div class="report-row"><span>Agent consensus</span><b class="pill">NEUTRAL · 9 agents</b></div>
+              <div class="report-row"><span>Action</span><b>No trade: consensus too weak</b></div>
+            </div>
           </div>
-          <p>
-            An automated research pipeline for stocks and options. A nightly scanner pulls earnings calendars and
-            SEC filings, runs a panel of AI analyst agents on each candidate, applies guardrails and risk-based
-            position sizing, and delivers a morning briefing to Telegram and Notion. A daily monitor tracks paper-trading
-            positions and flags thesis changes, stop-losses, and profit targets.
-          </p>
-          <ul class="tags small">
-            <li>Multi-agent analysis</li><li>Alpaca API</li><li>ArcticDB</li><li>Telegram bot</li>
-          </ul>
-          <div class="links">
-            <span class="note">Private repository. Walkthrough available on request.</span>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>Personal Intelligence System</h3>
+              <span class="lang">Python · TypeScript</span>
+            </div>
+            <div class="stats">
+              <div><strong>9</strong><span>AI analyst agents</span></div>
+              <div><strong>Nightly</strong><span>automated scans</span></div>
+              <div><strong>2</strong><span>delivery channels</span></div>
+            </div>
+            <p>
+              An automated research pipeline for stocks and options. A nightly scanner pulls earnings calendars and
+              SEC filings, runs a panel of AI analyst agents on each candidate, applies guardrails and risk-based
+              position sizing, and delivers a morning briefing to Telegram and Notion. A daily monitor tracks
+              paper-trading positions and flags thesis changes, stop-losses, and profit targets.
+            </p>
+            <ul class="tags small">
+              <li>Multi-agent analysis</li><li>Alpaca API</li><li>ArcticDB</li><li>Telegram bot</li>
+            </ul>
+            <div class="links">
+              <span class="note">Private repository. Walkthrough available on request.</span>
+            </div>
           </div>
         </article>
 
         <article class="project">
-          <div class="project-head">
-            <h3>This Portfolio Website</h3>
-            <span class="lang">HTML · CSS</span>
+          <div class="preview preview-browser" aria-label="Miniature preview of this website">
+            <div class="mini-browser">
+              <div class="mini-bar"><i></i><i></i><i></i><span>wgerhardstein.github.io</span></div>
+              <div class="mini-page">
+                <div class="mini-avatar"></div>
+                <div class="mini-lines"><b></b><span></span><span></span></div>
+                <div class="mini-cards"><span></span><span></span><span></span></div>
+              </div>
+            </div>
           </div>
-          <p>
-            A responsive, dependency-free portfolio site built with semantic HTML and CSS and deployed with
-            GitHub Pages. It supports light and dark mode automatically and is readable on screens from phones
-            to desktops.
-          </p>
-          <ul class="tags small">
-            <li>GitHub Pages</li><li>Responsive design</li><li>Accessibility</li>
-          </ul>
-          <div class="links">
-            <a href="https://github.com/wgerhardstein/wgerhardstein.github.io" target="_blank" rel="noopener">View code on GitHub →</a>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>This Portfolio Website</h3>
+              <span class="lang">HTML · CSS · JavaScript</span>
+            </div>
+            <div class="stats">
+              <div><strong>0</strong><span>frameworks</span></div>
+              <div><strong>2</strong><span>themes</span></div>
+              <div><strong>100%</strong><span>responsive</span></div>
+            </div>
+            <p>
+              A responsive portfolio site built with semantic HTML, CSS, and a small amount of vanilla JavaScript,
+              deployed with GitHub Pages. It includes a light/dark theme toggle, scroll-aware navigation, and
+              motion that respects the visitor's reduced-motion settings.
+            </p>
+            <ul class="tags small">
+              <li>GitHub Pages</li><li>Responsive design</li><li>Accessibility</li>
+            </ul>
+            <div class="links">
+              <a href="https://github.com/wgerhardstein/wgerhardstein.github.io" target="_blank" rel="noopener">View code on GitHub →</a>
+            </div>
           </div>
         </article>
+
       </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact reveal">
       <h2>Contact</h2>
       <p>Open to internships, research roles, and collaboration.</p>
       <div class="hero-actions">
@@ -140,7 +201,9 @@
   </main>
 
   <footer class="footer">
-    <p>© 2026 William Gerhardstein · Built with HTML &amp; CSS, hosted on GitHub Pages</p>
+    <p>© 2026 William Gerhardstein · Hosted on GitHub Pages</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
