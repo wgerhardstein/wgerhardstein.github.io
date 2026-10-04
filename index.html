@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>William Gerhardstein | Portfolio</title>
+  <meta name="description" content="William Gerhardstein builds Python research systems for quantitative trading and AI-driven market analysis.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#top" class="brand">William Gerhardstein</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section id="about" class="hero">
+      <p class="eyebrow">Personal Statement</p>
+      <h1>William Gerhardstein</h1>
+      <p class="statement">
+        I build Python research systems that decide when data is trustworthy enough to act on, from validating thousands of futures trading strategies to running AI-driven market research pipelines.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn" href="https://github.com/wgerhardstein" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill-grid">
+        <div class="skill-card">
+          <h3>Languages &amp; Tools</h3>
+          <ul class="tags">
+            <li>Python</li><li>TypeScript</li><li>pandas</li><li>NumPy</li>
+            <li>Git &amp; GitHub</li><li>Poetry</li><li>HTML / CSS</li><li>Bash</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Quantitative Research</h3>
+          <ul class="tags">
+            <li>Backtesting</li><li>Out-of-sample validation</li><li>Monte Carlo simulation</li>
+            <li>Position sizing &amp; risk</li><li>Statistical testing</li><li>Market data pipelines</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>AI &amp; Automation</h3>
+          <ul class="tags">
+            <li>Multi-agent LLM workflows</li><li>Claude / AI-assisted development</li>
+            <li>REST APIs (Alpaca, SEC EDGAR)</li><li>Telegram &amp; Notion integrations</li><li>Scheduled jobs (launchd)</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Professional</h3>
+          <ul class="tags">
+            <li>Research design</li><li>Evidence-based decisions</li><li>Technical writing</li>
+            <li>Project ownership</li><li>Problem decomposition</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <article class="project">
+          <div class="project-head">
+            <h3>Futures Research Platform</h3>
+            <span class="lang">Python</span>
+          </div>
+          <p>
+            A research program for deciding when a backtest can be trusted. I tested 8,179 futures strategy
+            configurations across 39 million one-minute bars and rejected 7,507 (91.8%) as indistinguishable
+            from noise. The project documents the decisions behind the result, including catching a deadline
+            calculation that was 50% too generous and declining to deploy a top-scoring strategy book that failed on
+            unseen data.
+          </p>
+          <ul class="tags small">
+            <li>Walk-forward validation</li><li>340K simulated paths</li><li>88 decision docs</li>
+          </ul>
+          <div class="links">
+            <a href="https://github.com/wgerhardstein/futures-research-platform" target="_blank" rel="noopener">View code on GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Personal Intelligence System</h3>
+            <span class="lang">Python · TypeScript</span>
+          </div>
+          <p>
+            An automated research pipeline for stocks and options. A nightly scanner pulls earnings calendars and
+            SEC filings, runs a panel of AI analyst agents on each candidate, applies guardrails and risk-based
+            position sizing, and delivers a morning briefing to Telegram and Notion. A daily monitor tracks paper-trading
+            positions and flags thesis changes, stop-losses, and profit targets.
+          </p>
+          <ul class="tags small">
+            <li>Multi-agent analysis</li><li>Alpaca API</li><li>ArcticDB</li><li>Telegram bot</li>
+          </ul>
+          <div class="links">
+            <span class="note">Private repository. Walkthrough available on request.</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>This Portfolio Website</h3>
+            <span class="lang">HTML · CSS</span>
+          </div>
+          <p>
+            A responsive, dependency-free portfolio site built with semantic HTML and CSS and deployed with
+            GitHub Pages. It supports light and dark mode automatically and is readable on screens from phones
+            to desktops.
+          </p>
+          <ul class="tags small">
+            <li>GitHub Pages</li><li>Responsive design</li><li>Accessibility</li>
+          </ul>
+          <div class="links">
+            <a href="https://github.com/wgerhardstein/wgerhardstein.github.io" target="_blank" rel="noopener">View code on GitHub →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Open to internships, research roles, and collaboration.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="mailto:williamgerhardstein@gmail.com">williamgerhardstein@gmail.com</a>
+        <a class="btn" href="https://github.com/wgerhardstein" target="_blank" rel="noopener">github.com/wgerhardstein</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 William Gerhardstein · Built with HTML &amp; CSS, hosted on GitHub Pages</p>
+  </footer>
+</body>
+</html>
